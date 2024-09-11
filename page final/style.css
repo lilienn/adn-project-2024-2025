@@ -1,56 +1,106 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-a{
-    color: white;
-    text-decoration: none;
+a {
+  color: white;
+  text-decoration: none;
 }
-nav{
-    height: 50px;
-    background: linear-gradient(90deg, rgba(51,36,132,1) 70%, rgba(208,46,52,1) 80%, rgba(224,171,46,1) 90%, rgba(72,162,70,1) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 10px;
+nav {
+  height: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(51, 36, 132, 1) 70%,
+    rgba(208, 46, 52, 1) 80%,
+    rgba(224, 171, 46, 1) 90%,
+    rgba(72, 162, 70, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
 }
-.logoAdn{
-    background-color: white;
-    height: 50px;
+nav .logoAdn {
+  background-color: white;
+  height: 50px;
 }
-.aDiv a{
-    font-size: 1.1rem;
-    padding: 0 10px;
+nav .aDiv a {
+  font-size: 1.1rem;
+  padding: 0 10px;
 }
-.bagnere{
-    height: 400px;
-    border-bottom: solid black 1px;
+.bagnere {
+  height: 400px;
+  border-bottom: solid 1px black;
 }
-#atelier{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
+#atelier {
+  margin-top: 10px;
 }
-.card{
-    width: 155px;
-    height: 250px;
-    border-radius: 10px;
-    box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
+#atelier.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
 }
-.card img{
-    height: 125px;
-    width: auto;
+#atelier.absolute {
+  position: relative;
 }
-.card .description{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 7px;
+#atelier.absolute .card {
+  position: absolute;
+  transform: translateX(5px);
 }
-.card .description p{
-    text-align: center;
+#atelier .card {
+  width: 155px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transition: all 1s;
+  background: white;
+}
+#atelier .card img {
+  height: 125px;
+  width: auto;
+}
+#atelier .card .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 7px;
+}
+#atelier .card .description p {
+  text-align: center;
+}
+#atelier .card:nth-child(1) {
+  z-index: 0;
+  transform: rotateZ(10deg);
+}
+#atelier .card:nth-child(1) img,
+#atelier .card:nth-child(1) .description {
+  z-index: 1;
+}
+#atelier .card:nth-child(2) {
+  z-index: 2;
+  transform: rotateZ(-10deg);
+}
+#atelier .card:nth-child(2) img,
+#atelier .card:nth-child(2) .description {
+  z-index: 3;
+}
+#atelier .card:nth-child(3) {
+  z-index: 4;
+  transform: rotateZ(-5deg);
+}
+#atelier .card:nth-child(3) img,
+#atelier .card:nth-child(3) .description {
+  z-index: 5;
+}
+#atelier .card:nth-child(4) {
+  z-index: 6;
+  transform: rotateZ(5deg);
+}
+#atelier .card:nth-child(4) img,
+#atelier .card:nth-child(4) .description {
+  z-index: 7;
 }
