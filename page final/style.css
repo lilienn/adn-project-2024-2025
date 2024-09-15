@@ -2,11 +2,23 @@
   padding: 0;
   margin: 0;
 }
+body {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+  scroll-behavior: smooth;
+}
+textarea {
+  resize: none;
+}
 a {
   color: white;
   text-decoration: none;
 }
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 50px;
   background: linear-gradient(
     90deg,
@@ -19,6 +31,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding-right: 10px;
+  z-index: 100;
 }
 nav .logoAdn {
   background-color: white;
@@ -29,23 +42,24 @@ nav .aDiv a {
   padding: 0 10px;
 }
 .bagnere {
+  position: relative;
   height: 400px;
   border-bottom: solid 1px black;
 }
-#atelier {
-  margin-top: 10px;
+.bagnere::before {
+  content: "image 1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 50px;
+  animation: image 5s infinite;
 }
-#atelier.grid {
+#atelier {
+  margin-top: 15px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-}
-#atelier.absolute {
-  position: relative;
-}
-#atelier.absolute .card {
-  position: absolute;
-  transform: translateX(5px);
 }
 #atelier .card {
   width: 155px;
@@ -56,7 +70,6 @@ nav .aDiv a {
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  transition: all 1s;
   background: white;
 }
 #atelier .card img {
@@ -72,35 +85,124 @@ nav .aDiv a {
 #atelier .card .description p {
   text-align: center;
 }
-#atelier .card:nth-child(1) {
-  z-index: 0;
-  transform: rotateZ(10deg);
-}
-#atelier .card:nth-child(1) img,
-#atelier .card:nth-child(1) .description {
-  z-index: 1;
-}
-#atelier .card:nth-child(2) {
-  z-index: 2;
-  transform: rotateZ(-10deg);
-}
-#atelier .card:nth-child(2) img,
-#atelier .card:nth-child(2) .description {
-  z-index: 3;
-}
-#atelier .card:nth-child(3) {
-  z-index: 4;
-  transform: rotateZ(-5deg);
-}
-#atelier .card:nth-child(3) img,
-#atelier .card:nth-child(3) .description {
-  z-index: 5;
-}
-#atelier .card:nth-child(4) {
-  z-index: 6;
+#atelier .card:nth-child(2n) {
   transform: rotateZ(5deg);
 }
-#atelier .card:nth-child(4) img,
-#atelier .card:nth-child(4) .description {
-  z-index: 7;
+#atelier .card:nth-child(2n + 1) {
+  transform: rotateZ(-5deg);
+}
+#tarif {
+  margin-top: 35px;
+}
+#tarif table {
+  width: 100%;
+  border: solid 3px black;
+}
+#tarif td,
+#tarif th {
+  border: solid 1px black;
+}
+#contact {
+  margin: 10px 20px;
+}
+#contact form {
+  display: grid;
+  grid-template-areas:
+    "labelNom labelPrenom"
+    "inputNom inputPrenom"
+    "labelMail labelMail"
+    "inputMail inputMail"
+    "labelMessage labelMessage"
+    "inputMessage inputMessage"
+    "submit submit";
+  gap: 10px 15px;
+}
+#contact input,
+#contact textarea {
+  border: none;
+  border-radius: 11px;
+  font-style: 1.1rem;
+}
+#contact input:focus-visible,
+#contact textarea:focus-visible {
+  outline: none;
+  border: solid 2px rgba(51, 36, 132, 1);
+}
+#contact input {
+  height: 35px;
+  padding: 0 10px;
+}
+#contact textarea {
+  padding: 10px;
+}
+#contact .submit {
+  position: relative;
+  border: 1px solid rgba(51, 36, 132, 1);
+  height: 35px;
+  border-radius: 11px;
+  z-index: 1;
+  transition: color 0.5s;
+  color: black;
+  overflow: hidden;
+}
+#contact .submit:hover {
+  color: white;
+  border: none;
+}
+#contact .submit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 11px;
+  background-color: rgba(51, 36, 132, 1);
+  z-index: -1;
+  transform: translate(-100%);
+  transition: all 0.5s;
+}
+#contact .submit:hover::before {
+  transform: translate(0);
+}
+.labelNom {
+  grid-area: labelNom;
+}
+.inputNom {
+  grid-area: inputNom;
+}
+.labelPrenom {
+  grid-area: labelPrenom;
+}
+.inputPrenom {
+  grid-area: inputPrenom;
+}
+.labelMail {
+  grid-area: labelMail;
+}
+.inputMail {
+  grid-area: inputMail;
+}
+.labelMessage {
+  grid-area: labelMessage;
+}
+.inputMessage {
+  grid-area: inputMessage;
+}
+.submit {
+  grid-area: submit;
+}
+@keyframes image {
+  0% {
+    content: "Image1";
+  }
+  25% {
+    content: "Image2";
+  }
+  50% {
+    content: "Image3";
+  }
+  75% {
+    content: "Image4";
+  }
+  100% {
+    content: "Image1";
+  }
 }
