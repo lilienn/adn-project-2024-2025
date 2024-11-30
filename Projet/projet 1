@@ -1,0 +1,13 @@
+Vous allez créer 2 pages web avec les connaissances que vous avez jusque-là.
+Dans la première page, il y aura :
+  — Une photo (pas spécialement de vous)
+  — une description
+  – une liste de vos compétences
+  – une liste de vos matières préférées
+Dans la deuxième page, il y aura un formulaire pour vous contacter
+Il faudra remplir :
+  — Le nom
+  — Le prénom
+  — Le commentaire
+
+Pour relier les deux pages entre elles, il faut mettre une balise <a href="fichier de renvoie">Nom de la page</a>
