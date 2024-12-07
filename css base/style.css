@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+p{
+    font-size: x-large;
+}
+.text{
+    color: red;
+}
+#text2{
+    background: green;
+    color: white;
+}
+input[type="checkbox"]{
+    width: 200px;
+    height: 200px;
+}
