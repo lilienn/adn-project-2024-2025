@@ -1,0 +1,42 @@
+body{
+    background-color: grey;
+}
+p{
+    display: inline;
+    color: white;
+}
+.card{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+}
+.widthBox{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+#height{
+    transform: rotate(90deg);
+    width: 100px;
+}
+#width{
+    width: 100px;
+}
+.textWidth{
+    margin-left: 10px;
+}
+.taille{
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+input[type="radio"]{
+    width: 15px;
+    height: 15px;
+}
+label{
+    font-size: x-large;
+}
+img{
+    margin: 20px 0 0 20px;
+}
