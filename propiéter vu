@@ -1,8 +1,12 @@
 Sélecteur
-- . + class : sert a selectioné un element HTML grace a sa class
-- # + id : sert a selectioné un element HTML grace a son ID
-- nom d'une balise
-- nom d'une balise + [propriéter HTML] : sert a selectioné un element HTML grace a une propriété
+
+– . + class : sert à sélectionner un élément HTML grâce à sa classe.
+
+- # + id : sert à sélectionner un élément HTML grâce à son ID.
+
+– nom d'une balise
+
+– nom d'une balise + [propriété HTML] : sert à sélectionner un élément HTML grâce à une propriété ;
 
 Les propriétés
 - color
