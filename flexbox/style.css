@@ -2,7 +2,7 @@ body > div{
     border: solid black 1px;
     margin: 10px
 }
-h2{
+h1, h2{
     text-align: center;
 }
 .item{
