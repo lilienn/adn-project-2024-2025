@@ -1,0 +1,32 @@
+body > div{
+    border: solid black 1px;
+    margin: 10px
+}
+h2{
+    text-align: center;
+}
+.item{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: orange;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex{
+    display: flex;
+}
+.jcc{
+    justify-content: center;
+}
+.aic{
+    align-items: center;
+}
+.aic .item:nth-child(2){
+    height: 200px;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
