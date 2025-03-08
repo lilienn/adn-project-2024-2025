@@ -1,0 +1,40 @@
+.container{
+    width: 500px;
+    height: 500px;
+    border: solid 3px black;
+    margin: 20px;
+}
+.item{
+    background-color: orange;
+    border: solid 1px grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid{
+    display: grid;
+}
+.template{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.gap{
+    gap: 10px;
+}
+.area{
+    grid-template-areas: "nav nav nav"
+                         "side content content"
+                         "footeur footeur footeur";
+}
+#navbar{
+    grid-area: nav;
+}
+#content{
+    grid-area: content;
+}
+#sidebar{
+    grid-area: side;
+}
+#footeur{
+    grid-area: footeur;
+}
