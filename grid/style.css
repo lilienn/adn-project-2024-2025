@@ -29,7 +29,7 @@ body{
 .area{
     grid-template-areas: "nav nav nav"
                          "side content content"
-                         "footeur footeur footeur";
+                         "footeur content content";
 }
 #navbar{
     grid-area: nav;

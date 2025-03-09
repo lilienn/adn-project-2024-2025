@@ -10,7 +10,7 @@
 }
 .red-1 { background-color: red; }
 .blue-1 { background-color: blue; }
-.yellow-1 { background-color: yellow; }
+.yellow-1 { background-color: rgb(255, 196, 0); }
 .green-1 { background-color: green; }
 .grid {
     display: grid;
@@ -56,4 +56,21 @@
 }
 .small-3 {
     background-color: teal;
+}
+.boxTemplate{
+    display: grid;
+    grid-template-areas: "rouge vert"
+                         "bleu jaune";
+}
+.blueT{
+    grid-area: bleu;
+}
+.redT{
+    grid-area: rouge;
+}
+.yellowT{
+    grid-area: jaune;
+}
+.greenT{
+    grid-area: vert;
 }
