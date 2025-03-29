@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices d'Animations</title>
+    <style>
+        /* Exercice Facile : Animation de couleur */
+        .color-box {
+            width: 100px;
+            height: 100px;
+            border: solid 3px black;
+            margin: 20px;
+        }
+        .facile:checked ~ .color-box{
+            animation: color-change 4s infinite;
+        }
+
+        @keyframes color-change {
+            0% {
+                background-color: red;
+            }
+            50% {
+                background-color: blue;
+            }
+            100% {
+                background-color: yellow;
+            }
+        }
+
+        /* Exercice Moyen : Balle qui rebondit */
+        .bounce-ball {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: orange;
+            position: relative;
+        }
+        .moyen:checked ~ .bounce-ball{
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                margin-top: 0;
+            }
+            50% {
+                margin-top: 200px;
+            }
+        }
+
+        /* Exercice Difficile : Barre de chargement animée */
+        .bar-container {
+            width: 300px;
+            height: 30px;
+            border: solid 2px black;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+
+        .loading-bar {
+            width: 0;
+            height: 100%;
+            background-color: green;
+            animation: loading 5s infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                width: 0;
+            }
+            50% {
+                width: 100%;
+                background-color: lime;
+            }
+            100% {
+                width: 0;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercices d'Animations</h1>
+
+    <!-- Exercice Facile -->
+    <section>
+        <h2>Exercice Facile : Animation de couleur</h2>
+        <input type="checkbox" class="facile">
+        <div class="color-box"></div>
+    </section>
+
+    <!-- Exercice Moyen -->
+    <section>
+        <h2>Exercice Moyen : Une balle qui rebondit</h2>
+        <input type="checkbox" class="moyen">
+        <div class="bounce-ball"></div>
+    </section>
+
+    <!-- Exercice Difficile -->
+    <section>
+        <h2>Exercice Difficile : Barre de chargement</h2>
+        <p><strong>overflow: hidden</strong> sert a avoir un element qui ne sort pas d un autre</p>
+        <div class="bar-container">
+            <div class="loading-bar"></div>
+        </div>
+    </section>
+</body>
+</html>
