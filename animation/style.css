@@ -1,17 +1,25 @@
-div{
-    width: 100px;
-    height: 100px;
+h1, h2{
+    text-align: center;
+}
+.background, .size{
+    width: 200px;
+    height: 200px;
     border: solid 3px black;
 }
-.size:hover{
-    animation: size 5s infinite;
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.background:hover{
+.size{
+    animation: size 30s infinite;
+}
+.background{
     animation: background 5s infinite;
 }
 @keyframes size{
-    0%{
-        width: 100px;
+    0%, 100%{
+        width: 200px;
     }
     25%{
         width: 50px;
@@ -19,12 +27,9 @@ div{
     75%{
         width: 150px;
     }
-    100%{
-        width: 100px;
-    }
 }
 @keyframes background{
-    0%{
+    0%, 100%{
         background-color: red;
     }
     25%{
@@ -32,8 +37,5 @@ div{
     }
     75%{
         background-color: aqua;
-    }
-    100%{
-        background-color: yellow;
     }
 }
