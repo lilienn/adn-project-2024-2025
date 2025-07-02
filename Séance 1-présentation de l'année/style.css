@@ -1,0 +1,16 @@
+.css{
+    position: relative;
+    color: red;
+    animation: animation 2s infinite;
+}
+@keyframes animation {
+    0%, 100%{
+        left: 0px;
+    }
+    50%{
+        left: 50px;
+    }
+}
+.js{
+    cursor: pointer;
+}
