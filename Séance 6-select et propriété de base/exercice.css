@@ -1,0 +1,47 @@
+/* Styles globaux */
+body {
+  margin: 2rem;
+  background-color: #f9f9f9;
+}
+
+section {
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Exercice 1 */
+.titre {
+  color: blue;
+}
+
+.text {
+  color: green;
+}
+
+#text2 {
+  color: red;
+}
+
+/* Exercice 2 */
+.contenu1 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.contenu2 {
+  background-color: lightblue;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+/* Exercice 3 */
+.difficile{
+    background: url('https://picsum.photos/300');
+    color: white;
+}
+.card {
+  font-size: 1.1rem;
+}

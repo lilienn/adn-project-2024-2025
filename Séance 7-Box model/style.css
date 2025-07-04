@@ -40,3 +40,9 @@ label{
 img{
     margin: 20px 0 0 20px;
 }
+.borderDiv{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: solid 5px black;
+}

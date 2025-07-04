@@ -1,7 +1,10 @@
-.text{
+#red{
     color: red;
 }
-#text2{
+#size{
+    font-size: 1.3rem;
+}
+#vert{
     background: green;
     color: white;
 }
